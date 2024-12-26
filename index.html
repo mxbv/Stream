@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.min.css" />
     <title>rsFeed - RSS articles reader</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>rsFeed - Your fast RSS articles reader</h1>
+    </header>
+    <div class="buttons">
+      <button data-rss="https://habr.com/ru/rss/articles/top/weekly/?limit=25">
+        <img src="img/habr.webp" alt="" />Habr
+      </button>
+      <button data-rss="https://news.ycombinator.com/rss">
+        <img src="img/hackernews.webp" alt="" />Hacker News
+      </button>
+      <button data-rss="https://knife.media/rss">
+        <img src="img/knife.webp" alt="" />Knife
+      </button>
+      <button data-rss="https://postnauka.org/feed">
+        <img src="img/knife.webp" alt="" />Postnauka
+      </button>
+    </div>
+    <div id="articles"></div>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
 </html>
