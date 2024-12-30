@@ -1,12 +1,16 @@
 const articlesContainer = document.querySelector(".articles");
 
+// Твой API-ключ
+const apiKey = "6yov8k1fainunzsw71ghtyqlgaevthu1eleska2w";
+
 async function loadRSS(rssUrl) {
   try {
     const response = await fetch(
       `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
         rssUrl
-      )}`
+      )}&api_key=${apiKey}`
     );
+
     if (!response.ok) throw new Error("Failed to fetch RSS feed.");
 
     const { items } = await response.json();
