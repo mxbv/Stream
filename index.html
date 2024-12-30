@@ -3,36 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>rsFeed - RSS articles reader</title>
   </head>
   <body>
     <header>
-      <h1>rsFeed - New & Articles reader</h1>
+      <h1>🗞rsFeed🗞</h1>
+      <h3>
+        A curated list of news sources and articles I occasionally explore.
+      </h3>
+      <div class="header-links">
+        <a href="https://rss2json.com/">This site use rss2json Api</a> /
+        <a href="#">Source code</a>
+      </div>
     </header>
     <div class="buttons">
-      <button data-rss="https://techcrunch.com/feed/">
-        <img src="img/techcrunch.webp" alt="Techcrunch" />Techcrunch
-      </button>
+      <button data-rss="https://techcrunch.com/feed/">Techcrunch</button>
       <button data-rss="https://www.wired.com/feed/category/science/latest/rss">
-        <img src="img/techcrunch.webp" alt="Techcrunch" />Wired
+        Wired
       </button>
-      <button data-rss="https://news.ycombinator.com/rss">
-        <img src="img/hackernews.webp" alt="Hacker News" />Hacker News
-      </button>
-      <button data-rss="https://www.raptitude.com/feed/">
-        <img src="img/raptitude.webp" alt="" />Raptitude
-      </button>
+      <button data-rss="https://news.ycombinator.com/rss">Hacker News</button>
+      <button data-rss="https://www.raptitude.com/feed/">Raptitude</button>
       <button data-rss="https://habr.com/ru/rss/articles/top/weekly/?limit=25">
-        <img src="img/habr.webp" alt="" />Habr
+        Habr
       </button>
-      <button data-rss="https://knife.media/rss">
-        <img src="img/knife.webp" alt="" />Knife
+      <button data-rss="https://knife.media/rss" class="button-end">
+        Knife
       </button>
     </div>
     <div class="articles"></div>
-    <footer></footer>
+    <button class="scrollToTop">⬆</button>
     <script src="app.js"></script>
   </body>
 </html>
