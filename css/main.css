@@ -1,13 +1,30 @@
-/* Minimal CSS Reset  */
+:root {
+  --green: #8fd14f;
+  --black: #0a0a0b;
+}
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #1e1e1e var(--black);
+}
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--black);
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 body,
 h1,
 h2,
@@ -21,128 +38,127 @@ ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
-}
-ol,
-ul {
   list-style: none;
 }
-img {
-  max-width: 100%;
-  height: auto;
+::-webkit-scrollbar {
+  width: 10px;
 }
-/* End Minimal CSS Reset  */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+::-moz-selection {
+  color: var(--green);
+  background: var(--black);
+}
+select option {
+  color: var(--green);
+  background: var(--black);
+}
+::selection {
+  color: var(--green);
+  background: var(--black);
+}
+
 * {
+  scrollbar-width: thin;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
-  max-width: 60vw;
-  min-height: 100%;
-  padding: 20px 0px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   background-color: #0a0a0b;
 }
-a {
-  color: #227afd;
+.side {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 200px;
+  height: 100%;
+  background-color: #131315;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
 }
-a:hover {
-  color: #0053d0;
+.side-text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-header {
+img {
+  width: 50px;
+  height: 30px;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-left: 10px;
+}
+.divider {
   width: 100%;
-  h1 {
-    text-align: center;
-    color: #fff;
-  }
-  h3 {
-    text-align: center;
-    color: #fff;
-    margin-top: 10px;
-  }
-  .header-links {
-    width: 100%;
-    height: 10px;
-    text-align: center;
-    color: #c6c6c6;
-    margin-top: 10px;
-  }
+  height: 1px;
+  background-color: #262628;
+  margin-top: 10px;
+}
+h4 {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
 }
 .buttons {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40px;
-  margin-top: 20px;
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background: none;
-    font-size: 18px;
-    border: none;
-    color: #fff;
-    background-color: #191919;
-    margin-right: 5px;
-  }
-  .button-end {
-    border: none;
-  }
-  button:hover {
-    color: #c6c6c6;
+  padding: 0 10px;
+}
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 13px;
+  border: none;
+  background-color: #262628;
+  color: #fff;
+  border-radius: 7px;
+  transition: .3s;
+  border: solid 2px #363639;
+}
+button:hover {
+background-color: #2e2e30;
+}
+.side-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  a {
+    text-align: center;
+    color: var(--green);
   }
 }
 .articles {
   width: 100%;
-  margin-top: 20px;
+  height: 100%;
+  padding: 0 50px 20px 250px;
+  overflow-y: auto;
   .article {
     display: flex;
-    padding: 20px 10px;
     align-items: center;
-    background-color: #191919;
-    margin-top: 20px;
-    text-align: center;
-  }
-}
-footer {
-  display: flex;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 30px;
-  right: 20px;
-  bottom: 50px;
-  color: #fff;
-  background-color: #191919;
-}
-@media screen and (max-width: 480px) {
-  body {
-    min-width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .buttons {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    height: 100px;
-    margin: 0 auto;
+    padding: 20px 15px;
+    background-color: #262628;
+    border-radius: 10px;
     margin-top: 30px;
-    button {
-      height: 50%;
-      border: none;
-      background-color: #191919;
-      margin-right: 5px;
-      margin-bottom: 5px;
+    border: solid 2px #363639;
+    transition: .3s;
+    a {
+      color: var(--green);
+      font-size: 19px;
     }
   }
-  .articles {
-    margin-top: 50px;
-    .article {
-      text-align: center;
-      justify-content: center;
+  .article:hover {
+    background-color: #2e2e30;
     }
-  }
 }
