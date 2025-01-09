@@ -68,7 +68,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #0a0a0b;
+  background-color: #0f1113;
 }
 .overlay {
   display: none;
@@ -108,7 +108,7 @@ img {
   margin-top: 10px;
 }
 h4 {
-  color: #e0e0e0;
+  color: #748691;
   text-align: center;
 }
 .buttons {
@@ -130,13 +130,13 @@ button {
   border: solid 1px #363639;
 }
 button:hover {
+  border-color: #49494d;
   background-color: #2e2e30;
 }
-.menu-links {
+.menu-link {
   display: flex;
   justify-content: center;
   width: 100%;
-
   a {
     text-align: center;
     color: var(--green);
@@ -165,6 +165,7 @@ button:hover {
     color: #73a83e;
   }
   .article:hover {
+    border-color: #49494d;
     background-color: #2e2e30;
   }
 }
@@ -198,9 +199,10 @@ button:hover {
     display: flex;
     position: fixed;
     z-index: 1000;
+    justify-content: flex-start;
     left: -210px;
     transition: left 0.3s ease;
-    margin-top: 50px;
+    margin-top: 55px;
   }
   .open {
     left: 0;
@@ -218,9 +220,7 @@ button:hover {
     margin-left: 20px;
   }
   .articles {
-    /* margin-top: 50px; */
     padding: 50px 5px;
-    /* overflow: visible; */
   }
   .overlay {
     display: block;
