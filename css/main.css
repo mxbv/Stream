@@ -77,8 +77,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.619);
+  z-index: 500;
 }
 .mobile-header {
   display: none;
@@ -91,7 +91,7 @@ body {
   height: 100%;
   background-color: #131315;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0px;
   overflow-y: auto;
   z-index: 1000;
 }
@@ -105,33 +105,31 @@ img {
   width: 100%;
   height: 1px;
   background-color: #262628;
-  margin-top: 10px;
 }
 h4 {
-  color: #748691;
+  color: #56565a;
   text-align: center;
+  margin-bottom: 10px;
 }
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 10px 10px 20px 10px;
+  padding: 20px 0;
 }
 button {
   width: 100%;
   padding: 15px;
   font-size: 16px;
-  margin-top: 13px;
   border: none;
   background: none;
   color: #fff;
   transition: 0.3s;
-  border: solid 1px #363639;
 }
 button:hover {
   border-color: #49494d;
-  background-color: #2e2e30;
+  background-color: #272729;
 }
 .menu-link {
   display: flex;
@@ -143,36 +141,39 @@ button:hover {
   }
 }
 .articles {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 0 50px 20px 250px;
   overflow-y: auto;
+  .articles-container {
+    width: 100%;
+    overflow-y: auto;
+  }
   .article {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 20px 15px;
-    background-color: #262628;
-    margin-top: 30px;
-    border: solid 1px #363639;
+    background: none;
     transition: 0.3s;
-    a {
-      color: var(--green);
-      font-size: 19px;
-    }
-  }
-  a:hover {
-    color: #73a83e;
+    color: var(--green);
+    font-size: 19px;
+    text-decoration: none;
   }
   .article:hover {
     border-color: #49494d;
-    background-color: #2e2e30;
+    background-color: #272729;
+    color: #7cb543;
   }
 }
 
 @media screen and (max-width: 768px) {
   body {
     padding-bottom: 20px;
+    height: 100dvh;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   .mobile-header {
     display: flex;
@@ -197,12 +198,13 @@ button:hover {
   }
   .menu {
     display: flex;
-    position: fixed;
-    z-index: 1000;
+    z-index: 999;
     justify-content: flex-start;
     left: -210px;
     transition: left 0.3s ease;
-    margin-top: 55px;
+    padding-top: 55px;
+    height: 100dvh;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   .open {
     left: 0;
@@ -210,17 +212,15 @@ button:hover {
   .menu img {
     display: none;
   }
-  .menu .divider {
-    display: none;
-  }
   img {
     width: 120px;
     height: 25px;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .articles {
-    padding: 50px 5px;
+    align-items: normal;
+    padding: 50px 5px 20px 5px;
   }
   .overlay {
     display: block;
