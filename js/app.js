@@ -46,3 +46,19 @@ document.addEventListener("DOMContentLoaded", () =>
       )
     )
 );
+
+const menu = document.querySelector(".menu");
+const menuToggle = document.querySelector(".menu-toggle");
+const overlay = document.querySelector(".overlay");
+
+// Открытие меню
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("open");
+  overlay.style.display = menu.classList.contains("open") ? "block" : "none";
+});
+
+// Закрытие меню при клике на фон
+overlay.addEventListener("click", () => {
+  menu.classList.remove("open");
+  overlay.style.display = "none";
+});

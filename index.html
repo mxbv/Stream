@@ -8,9 +8,28 @@
     <title>Stream - your news streams</title>
   </head>
   <body>
+    <div class="overlay"></div>
+    <header class="mobile-header">
+      <button class="menu-toggle" aria-label="Open Menu">
+        <svg
+          rpl=""
+          fill="currentColor"
+          height="20"
+          icon-name="menu-outline"
+          viewBox="0 0 20 20"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 10.625H1v-1.25h18v1.25Zm0-7.875H1V4h18V2.75ZM19 16H1v1.25h18V16Z"
+          ></path>
+        </svg>
+      </button>
+      <img src="icon/logo.svg" alt="Logo" />
+    </header>
     <section class="menu">
-      <div class="menu-text">
-        <img src="icon/logo.svg" alt="Logo" class="menu-logo" />
+      <div class="menu-logo">
+        <img src="icon/logo.svg" alt="Logo" />
         <div class="divider"></div>
       </div>
       <div class="buttons">
@@ -21,20 +40,18 @@
         >
           Wired
         </button>
-        <button
-          data-rss="https://www.theverge.com/rss/index.xml"
-        >
+        <button data-rss="https://www.theverge.com/rss/index.xml">
           The Verge
         </button>
         <button data-rss="https://feeds.arstechnica.com/arstechnica/index">
           ArsTechnica
         </button>
-        
         <button data-rss="https://news.ycombinator.com/rss">Hacker News</button>
         <button data-rss="https://www.raptitude.com/feed/">Raptitude</button>
         <button data-rss="http://rss.sciam.com/ScientificAmerican-Global">
           Scientific American
         </button>
+        <button data-rss="https://dou.ua/feed/">DOU</button>
         <button
           data-rss="https://habr.com/ru/rss/articles/top/weekly/?limit=25"
         >
