@@ -70,7 +70,7 @@ body {
   overflow: hidden;
   background-color: #0a0a0b;
 }
-.side {
+.menu {
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -81,19 +81,11 @@ body {
   padding: 20px;
   overflow-y: auto;
 }
-.side-text-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-img {
-  width: 50px;
-  height: 30px;
-}
-h1 {
-  color: #fff;
-  text-align: center;
-  margin-left: 10px;
+.menu-logo {
+  display: block;
+  width: 160px;
+  height: 35px;
+  margin: 0 auto;
 }
 .divider {
   width: 100%;
@@ -104,14 +96,13 @@ h1 {
 h4 {
   color: #fff;
   text-align: center;
-  margin-top: 10px;
 }
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0 10px;
+  padding: 10px 10px 20px 10px;
 }
 button {
   width: 100%;
@@ -128,7 +119,7 @@ button {
 button:hover {
 background-color: #2e2e30;
 }
-.side-links {
+.menu-links {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -157,6 +148,9 @@ background-color: #2e2e30;
       color: var(--green);
       font-size: 19px;
     }
+  }
+  a:hover {
+    color: #73a83e;
   }
   .article:hover {
     background-color: #2e2e30;

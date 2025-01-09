@@ -4,27 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <title>rsFeed - RSS articles reader</title>
+    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon" />
+    <title>Stream - your news streams</title>
   </head>
   <body>
-    <section class="side">
-      <div class="side-text">
-        <div class="side-text-logo">
-          <img src="img/logo.svg" alt="" />
-          <h1>rsFeed</h1>
-        </div>
-
+    <section class="menu">
+      <div class="menu-text">
+        <img src="icon/logo.svg" alt="Logo" class="menu-logo" />
         <div class="divider"></div>
-        <h4>Sources</h4>
       </div>
       <div class="buttons">
+        <h4>Streams</h4>
         <button data-rss="https://techcrunch.com/feed/">Techcrunch</button>
         <button
           data-rss="https://www.wired.com/feed/category/science/latest/rss"
         >
           Wired
         </button>
+        <button
+          data-rss="https://www.theverge.com/rss/index.xml"
+        >
+          The Verge
+        </button>
+        <button data-rss="https://feeds.arstechnica.com/arstechnica/index">
+          ArsTechnica
+        </button>
+        
         <button data-rss="https://news.ycombinator.com/rss">Hacker News</button>
         <button data-rss="https://www.raptitude.com/feed/">Raptitude</button>
         <button data-rss="http://rss.sciam.com/ScientificAmerican-Global">
@@ -39,7 +44,7 @@
           Knife
         </button>
       </div>
-      <div class="side-links">
+      <div class="menu-links">
         <a href="https://github.com/mxbv/rsFeed">OpenSource</a>
       </div>
     </section>
