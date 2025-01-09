@@ -1,4 +1,4 @@
-# rsFeed
+# Stream
 
 ### About
 
