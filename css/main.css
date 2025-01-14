@@ -96,6 +96,12 @@ body {
   z-index: 1000;
   border-right: solid 1px #262628;
 }
+.menu-logo-img {
+  display: block;
+  width: 160px;
+  height: 60px;
+  margin: 0 auto;
+}
 .mobile-header-burger {
   width: 30px;
   height: 30px;
